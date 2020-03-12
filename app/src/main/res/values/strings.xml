@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Modulo 2 Reconocimiento Actor</string>
+    <string name="app_name">Actor Recognition</string>
+    <string name="TomarFoto">Tomar Foto</string>
+    <string name="CargarImagen">Cargar Imagen</string>
+    <string name="afterProccess">after proccess</string>
+    <string name="tempLog">temp log</string>
+    <string name="nombreActor">Nombre del actor</string>
+    <string name="hintNombre">Juanito Alimana</string>
 </resources>
