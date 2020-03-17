@@ -157,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
                 Bitmap gallBM = MediaStore.Images.Media.getBitmap(getContentResolver(), selectedImage);
                 //Bitmap gallBM = ImageDecoder.decodeBitmap(imgSrc );
                 ImageView IV = findViewById(R.id.picZone);
+
                 baseMat = new Mat();
                 Utils.bitmapToMat(gallBM ,baseMat );
                 evokeMat(baseMat);

@@ -72,8 +72,8 @@
 
     <TextView
         android:id="@+id/dbgOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="11dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="149dp"
         android:contentDescription="@string/tempLog"
