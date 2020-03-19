@@ -11,12 +11,12 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageView
             android:id="@+id/picZone"
@@ -30,11 +30,11 @@
     </FrameLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -42,8 +42,10 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="52dp"
-            android:layout_marginBottom="20dp"
+            android:layout_gravity="bottom|left"
+            android:layout_margin="1dp"
+            android:layout_weight="-1"
+            android:includeFontPadding="false"
             android:onClick="invokeCamera"
             android:text="@string/TomarFoto" />
 
@@ -51,17 +53,29 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="384dp"
-            android:layout_marginBottom="24dp"
+            android:layout_gravity="bottom|left"
+            android:layout_margin="1dp"
+            android:layout_weight="-1"
+            android:includeFontPadding="false"
             android:onClick="invokeGallery"
             android:text="@string/CargarImagen" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_margin="1dp"
+            android:layout_weight="-1"
+            android:includeFontPadding="false"
+            android:onClick="resetPoints"
+            android:text="Reset points" />
 
         <EditText
             android:id="@+id/nameInp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="41dp"
+            android:layout_margin="1dp"
             android:autofillHints=""
             android:contentDescription="@string/nombreActor"
             android:ems="10"
@@ -70,16 +84,17 @@
 
         <TextView
             android:id="@+id/dbgOut"
-            android:layout_width="0dp"
-            android:layout_height="11dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="149dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
             android:contentDescription="@string/tempLog" />
 
         <org.opencv.android.JavaCameraView
             android:id="@+id/CameraView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:visibility="gone" />
 
     </LinearLayout>
 

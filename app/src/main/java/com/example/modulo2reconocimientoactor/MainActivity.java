@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
 
 
                     i++;
-                    toOutViewLog("point "+ i + "-- x: "+motionEvent.getX() + "->"+ x + "  y:"+motionEvent.getY() + "->"+y );
+                    toOutViewLog("point "+ i + "\nx: "+ x + " \ny:"+y );
                     evokeMat(baseMat);
                     Log.d("POINTCLC", "point "+ i + "data (x , y , viewWidth , viewHeigh):        "+ x + " :: " + y + " :: " + vw + " :: " + vh);
                     //Log.d("POINTADD", "point "+ i + "-- x: "+motionEvent.getX() + "  y:"+motionEvent.getY());
@@ -183,7 +183,6 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
             Bitmap picBM = (Bitmap) extras.get("data");
             baseMat = new Mat(picBM.getHeight() , picBM.getWidth() , CvType.CV_32SC3);
             Utils.bitmapToMat(picBM,baseMat);
-            cameraBridgeViewBase.enableView();
             ImageView IV = findViewById(R.id.picZone);
             IV.setImageBitmap(picBM);
 
@@ -285,6 +284,12 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
         touchCoords = new ArrayList<>();
         bmpCoords = new ArrayList<>();
         i = 0;
+        if(baseMat != null)
+            evokeMat(baseMat);
+    }
+
+    public void resetPoints( View view ){
+        resetPoints();
     }
 
     //expects touchCoords relative to the displays size, NOTE: 0,0 > left, top
