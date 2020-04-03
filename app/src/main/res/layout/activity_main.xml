@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:visibility="visible"
-    tools:context=".MainActivity">
+    tools:context=".SecondPage">
 
 
     <FrameLayout
@@ -25,77 +25,17 @@
             android:layout_gravity="center"
             android:adjustViewBounds="true"
             android:contentDescription="@string/afterProccess"
-            android:scaleType="centerInside" />
-
-    </FrameLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:layout_margin="1dp"
-            android:layout_weight="-1"
-            android:includeFontPadding="false"
-            android:onClick="invokeCamera"
-            android:text="@string/TomarFoto" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:layout_margin="1dp"
-            android:layout_weight="-1"
-            android:includeFontPadding="false"
-            android:onClick="invokeGallery"
-            android:text="@string/CargarImagen" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:layout_margin="1dp"
-            android:layout_weight="-1"
-            android:includeFontPadding="false"
-            android:onClick="resetPoints"
-            android:text="Reset points" />
-
-        <EditText
-            android:id="@+id/nameInp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="1dp"
-            android:autofillHints=""
-            android:contentDescription="@string/nombreActor"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine" />
+            android:scaleType="centerInside"/>
 
         <TextView
             android:id="@+id/dbgOut"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="163dp"
+            android:layout_height="43dp"
             android:layout_margin="1dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="144dp"
             android:contentDescription="@string/tempLog" />
 
-        <org.opencv.android.JavaCameraView
-            android:id="@+id/CameraView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="1dp"
-            android:visibility="gone" />
-
-    </LinearLayout>
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
